@@ -43,7 +43,7 @@ body{
 
 /*  ****** LOGIN-PAGE ***** */
 .login-page{
-  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  background: radial-gradient(#CBBAB1 20%, #fdfcfb );
+  /* background: radial-gradient(closest-side, #CBBAB1, #fdfcfb, #CBBAB1); */
   height: 100vh;
-
 }
