@@ -1,4 +1,5 @@
 import React from 'react'
+import LoginCard from '../components/LoginCard'
 
 function Login() {
   return (
@@ -6,6 +7,9 @@ function Login() {
         <header className='row text-center w-100'>
             <div className='my-4 header-logo'><span style={{fontFamily: "Nyght Serif Italic"}}>Sib</span>Links</div>
         </header>
+        <div className='justify-content-center row w-100'>
+        <LoginCard />
+        </div>
     </div>
   )
 }
