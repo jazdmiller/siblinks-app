@@ -68,8 +68,10 @@ body{
   background: radial-gradient(#CBBAB1 20%, #fdfcfb );
   /* background: radial-gradient(closest-side, #CBBAB1, #fdfcfb, #CBBAB1); */
   height: 100vh;
+  width: 100vw;
 }
 
 .header-logo{
-
+ font-family: 'Nyght Serif', serif;
+ font-size: 2em;
 }
