@@ -37,6 +37,28 @@
   }
 } */
 
+
+@font-face {
+  font-family: 'Nyght Serif';
+  src: url('../public/fonts/nyghtserif-medium-webfont.woff2') format('woff2'),
+       url('../public/fonts/nyghtserif-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'Nyght Serif Italic';
+  src: url('../public/fonts/nyghtserif-mediumitalic-webfont.woff2') format('woff2'),
+       url('../public/fonts/nyghtserif-mediumitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body{
   margin: 0;
 }
@@ -46,4 +68,8 @@ body{
   background: radial-gradient(#CBBAB1 20%, #fdfcfb );
   /* background: radial-gradient(closest-side, #CBBAB1, #fdfcfb, #CBBAB1); */
   height: 100vh;
+}
+
+.header-logo{
+
 }
