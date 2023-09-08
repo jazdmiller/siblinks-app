@@ -75,3 +75,23 @@ body{
  font-family: 'Nyght Serif', serif;
  font-size: 2em;
 }
+
+.form-label{
+  margin-top: 20%;
+}
+
+
+/* ******* MEDIA QUERIES ******** */
+
+@media (min-width: 390px){
+  .login-card{
+    width: 70% !important;
+    height: 70vh !important;
+  }
+}
+
+@media (min-width: 768px){
+  .login-card{
+    width: 40% !important;
+  }
+}
