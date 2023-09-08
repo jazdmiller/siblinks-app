@@ -89,7 +89,7 @@ input[type=text], input[type=password]{
 }
 
 input[type=submit]{
-  background-color: #BE845E;
+  background-color: #955F3D;
   color: #EEE6DE;
   border-radius: 15px;
   font-family: "Lato", sans-serif;
@@ -116,6 +116,18 @@ input:focus{
   font-size:1.3em;
 }
 
+.card-header-label a{
+  text-decoration: none;
+  color: #908686;
+}
+
+.card-header-label a:visited{
+  color: #908686;
+}
+
+.card-header-label a:hover{
+  color: #BFBFBF;
+}
 /* ******* MEDIA QUERIES ******** */
 
 @media (min-width: 390px){
@@ -125,7 +137,7 @@ input:focus{
   }
 
   .form-label{
-    margin-top: 20%;
+    margin-top: 15%;
   }
 }
 
@@ -135,7 +147,7 @@ input:focus{
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 954px){
   .login-card{
     width: 30% !important;
   }

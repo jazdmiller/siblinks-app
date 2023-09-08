@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function LoginCard() {
   return (
@@ -6,10 +7,10 @@ function LoginCard() {
             <div className='card-header mt-3 px-md-5' style={{background: "none", border: "none"}}>
                 <div className='row justify-content-between card-header-label'>
                     <div className='col'>Log In</div>
-                    <div className='col text-end' style={{color: "#908686"}}>Sign Up</div>
+                    <Link className='col text-end'>Sign Up</Link>
                 </div>
             </div>
-            <div className='card-body mt-2 p-md-5'>
+            <div className='card-body p-md-5'>
                 <form>
 
                     <div className='form-label'>
