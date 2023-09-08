@@ -9,7 +9,7 @@ function LoginCard() {
                     <div className='col text-end' style={{color: "#908686"}}>Sign Up</div>
                 </div>
             </div>
-            <div className='card-body mt-4 p-md-5'>
+            <div className='card-body mt-2 p-md-5'>
                 <form>
 
                     <div className='form-label'>

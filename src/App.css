@@ -88,6 +88,18 @@ input[type=text], input[type=password]{
   background: none;
 }
 
+input[type=submit]{
+  background-color: #BE845E;
+  color: #EEE6DE;
+  border-radius: 15px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1em;
+  padding: 1% 20%;
+  border: none;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  margin-top: 20%;
+}
+
 input:focus{
   outline: none;
   background: #E3DCD8;
@@ -117,9 +129,15 @@ input:focus{
   }
 }
 
+@media (min-width: 500px){
+  .login-card{
+    width: 50% !important;
+  }
+}
+
 @media (min-width: 768px){
   .login-card{
-    width: 40% !important;
+    width: 30% !important;
   }
 
   .form-label{
