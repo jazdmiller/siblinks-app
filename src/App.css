@@ -127,6 +127,7 @@ input:focus{
 
 .card-header-label a:hover{
   color: #BFBFBF;
+  transition: color .3s;
 }
 /* ******* MEDIA QUERIES ******** */
 
