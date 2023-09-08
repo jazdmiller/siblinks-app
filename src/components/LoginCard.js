@@ -3,16 +3,16 @@ import React from 'react'
 function LoginCard() {
   return (
         <div className='card login-card'>
-            <div className='card-header'>
-                <div className='row justify-content-between'>
+            <div className='card-header mt-3 px-md-5' style={{background: "none", border: "none"}}>
+                <div className='row justify-content-between card-header-label'>
                     <div className='col'>Log In</div>
-                    <div className='col text-end'>Sign Up</div>
+                    <div className='col text-end' style={{color: "#908686"}}>Sign Up</div>
                 </div>
             </div>
             <div className='card-body mt-4 p-md-5'>
                 <form>
 
-                    <div className=' form-label'>
+                    <div className='form-label'>
                     <label>
                        Email address 
                     </label>
@@ -21,12 +21,12 @@ function LoginCard() {
                     </div>
                     </div>
 
-                    <div className=' form-label'>
+                    <div className='form-label'>
                     <label>
                         Password
                     </label>
                     <div>
-                        <input className="w-100" type="text" name="password"/>
+                        <input className="w-100" type="password" name="password"/>
                     </div>
                     </div>
 

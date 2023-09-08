@@ -78,8 +78,31 @@ body{
 
 .form-label{
   margin-top: 20%;
+  font-family: 'Lato', sans-serif;
+  color: #908686;
 }
 
+input[type=text], input[type=password]{
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+}
+
+input:focus{
+  outline: none;
+  background: #E3DCD8;
+}
+
+.login-card{
+  background: linear-gradient(180deg, rgba(245,245, 245, 0.47) 0%, rgba(245, 245, 245, 0) 100%) !important;
+  border-radius: 15px !important;
+  border: none !important;
+}
+
+.card-header-label{
+  font-family: 'Lato', sans-serif;
+  font-size:1.3em;
+}
 
 /* ******* MEDIA QUERIES ******** */
 
@@ -88,10 +111,18 @@ body{
     width: 70% !important;
     height: 70vh !important;
   }
+
+  .form-label{
+    margin-top: 20%;
+  }
 }
 
 @media (min-width: 768px){
   .login-card{
     width: 40% !important;
+  }
+
+  .form-label{
+    margin-top: 10%;
   }
 }
