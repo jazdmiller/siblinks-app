@@ -18,7 +18,7 @@ function SignupCard() {
                        First name
                     </label>
                     <div>
-                    <input className='w-100' type="text" name="first name" />
+                    <input className='w-100' type="text" name="first name" required/>
                     </div>
                     </div>
 
@@ -27,7 +27,7 @@ function SignupCard() {
                        Email address 
                     </label>
                     <div>
-                    <input className='w-100' type="text" name="email address" />
+                    <input className='w-100' type="text" name="email address" required/>
                     </div>
                     </div>
 
@@ -36,7 +36,7 @@ function SignupCard() {
                         Password
                     </label>
                     <div>
-                        <input className="w-100" type="password" name="password"/>
+                        <input className="w-100" type="password" name="password" required/>
                     </div>
                     </div>
 
@@ -45,7 +45,7 @@ function SignupCard() {
                         Confirm password
                     </label>
                     <div>
-                        <input className="w-100" type="password" name=" confirm password"/>
+                        <input className="w-100" type="password" name=" confirm password" required/>
                     </div>
                     </div>
 
