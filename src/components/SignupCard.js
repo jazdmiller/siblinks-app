@@ -1,17 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function LoginCard() {
-  return (
+function SignupCard() {
+    return (
         <div className='card login-card'>
             <div className='card-header mt-3 px-md-5' style={{background: "none", border: "none"}}>
                 <div className='row justify-content-between card-header-label'>
-                    <div className='col'>Log In</div>
-                    <Link to="/signup" className='col text-end'>Sign Up</Link>
+                    <div className='col'>Sign Up</div>
+                    <Link to="/login" className='col text-end'>Log In</Link>
                 </div>
             </div>
             <div className='card-body p-md-5'>
                 <form>
+
+                <div className='form-label'>
+                    <label>
+                       First name
+                    </label>
+                    <div>
+                    <input className='w-100' type="text" name="first name" />
+                    </div>
+                    </div>
 
                     <div className='form-label'>
                     <label>
@@ -31,6 +40,15 @@ function LoginCard() {
                     </div>
                     </div>
 
+                    <div className='form-label'>
+                    <label>
+                        Confirm password
+                    </label>
+                    <div>
+                        <input className="w-100" type="password" name=" confirm password"/>
+                    </div>
+                    </div>
+
                     <div className='text-center form-label'>
                         <input type="submit" value="Log In" />
                     </div>
@@ -40,4 +58,4 @@ function LoginCard() {
   )
 }
 
-export default LoginCard
+export default SignupCard
