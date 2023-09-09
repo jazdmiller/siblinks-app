@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 function SignupCard() {
+    const firstNameRef = useRef() 
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const confirmPasswordRef = useRef()
+
     return (
         <div className='card login-card'>
             <div className='card-header mt-3 px-md-5' style={{background: "none", border: "none"}}>
@@ -18,7 +23,7 @@ function SignupCard() {
                        First name
                     </label>
                     <div>
-                    <input className='w-100' type="text" name="first name" required/>
+                    <input className='w-100' type="text" ref={firstNameRef} name="first name" required/>
                     </div>
                     </div>
 
@@ -27,7 +32,7 @@ function SignupCard() {
                        Email address 
                     </label>
                     <div>
-                    <input className='w-100' type="text" name="email address" required/>
+                    <input className='w-100' type="text" ref={emailRef} name="email address" required/>
                     </div>
                     </div>
 
@@ -36,7 +41,7 @@ function SignupCard() {
                         Password
                     </label>
                     <div>
-                        <input className="w-100" type="password" name="password" required/>
+                        <input className="w-100" type="password" ref={passwordRef} name="password" required/>
                     </div>
                     </div>
 
@@ -45,12 +50,12 @@ function SignupCard() {
                         Confirm password
                     </label>
                     <div>
-                        <input className="w-100" type="password" name=" confirm password" required/>
+                        <input className="w-100" type="password" ref={confirmPasswordRef} name="confirm password" required/>
                     </div>
                     </div>
 
                     <div className='text-center form-label'>
-                        <input type="submit" value="Log In" />
+                        <input type="submit" value="Sign Up" />
                     </div>
                 </form>
             </div>
