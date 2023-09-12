@@ -5,10 +5,10 @@ import { getAuth } from "firebase/auth"
 import { getStorage } from "firebase/storage"
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: REACT_APP_FIREBASE_API_KEY_DOMAIN,
+  apiKey: "AIzaSyB88oxPKIiNkDjjrcGt9LbBK7dGWjXuXvI",
+  authDomain: "siblinks-app.firebaseapp.com",
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: REACT_APP_FIREBASE_STORAGE_BUCKET,
+  storageBucket: "siblinks-app.appspot.com",
   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.REACT_APP_FIREBASE_APP_ID
 };

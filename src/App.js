@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard'
 import Protected from './components/Protected';
+import { AuthProvider } from './contexts/AuthContext';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -17,6 +18,8 @@ function App() {
   }
 
   return (
+    
+      <AuthProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />}/>
@@ -25,6 +28,8 @@ function App() {
         <Route path="/dashboard" element={<Protected isLoggedIn={isLoggedIn}><Dashboard /></Protected>}/>
       </Routes>
     </Router>
+        </AuthProvider>
+    
   );
 }
 
