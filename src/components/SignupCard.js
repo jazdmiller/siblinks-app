@@ -9,9 +9,9 @@ function SignupCard() {
     const confirmPasswordRef = useRef()
     const { signup } = useAuth()
     const [error, setError] = useState('')
-    const [loading, setLoading] = useState('false')
+    const [loading, setLoading] = useState(false)
 
-    function handleSubmit(e){
+   async function handleSubmit(e){
         e.preventDefault()
 
         if(passwordRef.current.value !== confirmPasswordRef.current.value){
@@ -21,9 +21,12 @@ function SignupCard() {
         try {
             setError('')
             setLoading(true)
-            signup(emailRef.current.value, passwordRef.current.value)
-        } catch {
-            setError('Failed to create an account.')
+           await signup(emailRef.current.value, passwordRef.current.value)
+        } catch(err){
+            setError('Failed to create an account.' + err.message)
+            console.error(err)
+        } finally {
+
             setLoading(false)
         }
     }
@@ -77,7 +80,7 @@ function SignupCard() {
                     </div>
 
                     <div className='text-center form-label'>
-                        <button  >Sign Up</button>
+                        <input disabled={loading} type="submit" value="Sign Up" />
                     </div>
                 </form>
             </div>
