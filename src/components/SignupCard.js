@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
 function SignupCard() {
@@ -7,9 +7,10 @@ function SignupCard() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const confirmPasswordRef = useRef()
-    const { signup } = useAuth()
+    const { signup} = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
 
    async function handleSubmit(e){
         e.preventDefault()
@@ -22,6 +23,7 @@ function SignupCard() {
             setError('')
             setLoading(true)
            await signup(emailRef.current.value, passwordRef.current.value)
+           navigate('/dashboard')
         } catch(err){
             setError('Failed to create an account.' + err.message)
             console.error(err)
@@ -38,6 +40,7 @@ function SignupCard() {
                     <Link to="/login" className='col text-end'>Log In</Link>
                 </div>
 
+                
                 {error && <div className='alert alert-danger'>{error}</div>}
             </div>
             <div className='card-body p-md-5'>

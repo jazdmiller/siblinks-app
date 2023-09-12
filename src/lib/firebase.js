@@ -19,3 +19,4 @@ export const auth = getAuth(app)
 export const storage = getStorage(app)
 
 export { createUserWithEmailAndPassword } from 'firebase/auth'
+export { signInWithEmailAndPassword } from 'firebase/auth'
