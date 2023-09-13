@@ -11,6 +11,7 @@ function SignupCard() {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
+  
 
    async function handleSubmit(e){
         e.preventDefault()
@@ -22,7 +23,7 @@ function SignupCard() {
         try {
             setError('')
             setLoading(true)
-           await signup(emailRef.current.value, passwordRef.current.value)
+           await signup(emailRef.current.value, passwordRef.current.value, firstNameRef.current.value)
            navigate('/dashboard')
         } catch(err){
             setError('Failed to create an account.' + err.message)

@@ -129,6 +129,14 @@ input:focus{
   color: #BFBFBF;
   transition: color .3s;
 }
+
+/* ******* DASHBOARD PAGE ******** */
+
+.dashboard-page{
+  background-color: #E7DFDF;
+  height: 100vh;
+}
+
 /* ******* MEDIA QUERIES ******** */
 
 @media (min-width: 390px){
