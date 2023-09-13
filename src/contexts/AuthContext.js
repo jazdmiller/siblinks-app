@@ -9,6 +9,10 @@ export function useAuth() {
 export function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)
+
+    function capitalizeFirstLetter(string){
+        return string.charAt(0).toUpperCase() + string.slice(1)
+    }
     
     function signup(email, password, firstName) {
         
@@ -17,7 +21,7 @@ export function AuthProvider({ children }) {
        .then(async (userCredentials) => {
         console.log(userCredentials)
         await updateProfile( userCredentials.user, {
-            displayName: firstName
+            displayName: capitalizeFirstLetter(firstName)
         })
         console.log("Updated user: ", userCredentials.user);
        })
