@@ -7,6 +7,7 @@ import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard'
 import Protected from './components/Protected';
 import { AuthProvider } from './contexts/AuthContext';
+import ForgotPassword from './pages/ForgotPassword';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -25,6 +26,7 @@ function App() {
         <Route exact path="/" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/signup" element={<Signup />}/>
+        <Route path="/forgot-password" element={<ForgotPassword />}/>
         <Route path="/dashboard" element={<Protected><Dashboard /></Protected>}/>
       </Routes>
     </Router>

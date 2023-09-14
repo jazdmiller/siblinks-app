@@ -2,9 +2,8 @@ import React, { useRef, useState } from 'react'
 import { Link, useNavigate} from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 
-function LoginCard() {
+function ForgotPassword() {
     const emailRef = useRef()
-    const passwordRef = useRef()
     const { login } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
@@ -15,7 +14,7 @@ function LoginCard() {
         try {
             setError('')
             setLoading(true)
-           await login(emailRef.current.value, passwordRef.current.value)
+        //    await login(emailRef.current.value, passwordRef.current.value)
            navigate('/dashboard')
         } catch(err){
             setError('Failed to login.' + err.message)
@@ -29,7 +28,7 @@ function LoginCard() {
         <div className='card login-card'>
             <div className='card-header mt-3 px-md-5' style={{background: "none", border: "none"}}>
                 <div className='row justify-content-between card-header-label'>
-                    <div className='col'>Log In</div>
+                    <div className='col'>Reset Password</div>
                     <Link to="/signup" className='col text-end'>Sign Up</Link>
                 </div>
             </div>
@@ -46,23 +45,14 @@ function LoginCard() {
                     </div>
                     </div>
 
-                    <div className='form-label'>
-                    <label>
-                        Password
-                    </label>
-                    <div>
-                        <input className="w-100" type="password" name="password" ref={passwordRef}/>
-                    </div>
-                    </div>
-
                     <div className='text-center form-label'>
-                        <input disabled={loading} type="submit" value="Log In" />
+                        <input disabled={loading} type="submit" value="Reset Password" />
                     </div>
                 </form>
-                <div className="text-center mt-3"><Link to="/forgot-password">Forgot password?</Link> </div>
+                <div className="text-center mt-3"><Link to="/login">Login</Link> </div>
             </div>
         </div>
   )
 }
 
-export default LoginCard
+export default ForgotPassword
