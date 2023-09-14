@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore }  from "firebase/firestore";
-import { getAuth, updateProfile } from "firebase/auth"
+import { getAuth, updateProfile, sendPasswordResetEmail } from "firebase/auth"
 import { getStorage } from "firebase/storage"
 
 const firebaseConfig = {
@@ -20,4 +20,4 @@ export const storage = getStorage(app)
 
 export { createUserWithEmailAndPassword } from 'firebase/auth'
 export { signInWithEmailAndPassword } from 'firebase/auth'
-export { updateProfile } from 'firebase/auth'
+export { updateProfile, sendPasswordResetEmail } from 'firebase/auth'
