@@ -59,6 +59,7 @@ function LoginCard() {
                         <input disabled={loading} type="submit" value="Log In" />
                     </div>
                 </form>
+                <div className="text-center mt-3"><Link to="forgot-password">Forgot password?</Link> </div>
             </div>
         </div>
   )

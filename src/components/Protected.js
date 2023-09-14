@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext';
 
-function Protected({isLoggedIn, children}) {
-    if(!isLoggedIn){
+function Protected({children}) {
+
+  const { currentUser } = useAuth()
+
+    if(!currentUser){
         return <Navigate to='/login' replace />
     }
   return children;
